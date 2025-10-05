@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zama Tutorial: Guess the Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Guess the Secret Number</h1>
+      <p>The contract holds a secret number. Can you guess it?</p>
+      <button id="connectButton">Connect Wallet</button>
+      <div id="gameSection" class="hidden">
+        <p>Wallet: <span id="walletAddress"></span></p>
+        <hr />
+        <input
+          type="number"
+          id="guessInput"
+          placeholder="Enter a number (0-255)"
+          min="0"
+          max="255"
+        />
+        <button id="guessButton">Guess!</button>
+        <p class="result-status">
+          Result: <span id="resultText">Waiting for your guess...</span>
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.9.0/ethers.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fhevmjs/fhevm.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
